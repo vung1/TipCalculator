@@ -119,7 +119,13 @@
                             <outletCollection property="gestureRecognizers" destination="SuU-xp-WIC" appends="YES" id="IZ1-Ya-MXj"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Calculator" id="gMQ-sH-KxM"/>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="gMQ-sH-KxM">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="Vzr-zI-oJd">
+                            <connections>
+                                <segue destination="jHN-Zr-6kg" kind="push" id="V66-Hc-Noc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="r0c-MD-RLR" id="iej-N1-Per"/>
                         <outlet property="splitLabel" destination="lsS-YJ-LTm" id="FcP-O5-8o5"/>
@@ -136,7 +142,41 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="852.17391304347836" y="117.85714285714285"/>
+            <point key="canvasLocation" x="1762.3188405797102" y="117.85714285714285"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Zxn-HC-sg0">
+            <objects>
+                <viewController id="jHN-Zr-6kg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E5e-6S-uec" customClass="SettingsViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="naB-2Q-BmZ">
+                                <rect key="frame" x="20" y="199" width="374" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="15%"/>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbs-Eq-cEV">
+                                <rect key="frame" x="20" y="160" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="UVG-ic-Urk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JV0-eQ-nVh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2TB-Se-8Ac" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2482.608695652174" y="117.85714285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RxV-fj-7VZ">
@@ -149,12 +189,31 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="saN-Ui-CpV"/>
+                        <segue destination="hkC-1I-vOh" kind="relationship" relationship="rootViewController" id="saN-Ui-CpV"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="84t-DC-NY7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-57.971014492753625" y="117.85714285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dHK-Gu-4DY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hkC-1I-vOh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="375-Co-BXY"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y5l-Np-u9g">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FiU-Q4-3yR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jnq-Vr-3Xb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852.17391304347836" y="117.85714285714285"/>
         </scene>
     </scenes>
 </document>
